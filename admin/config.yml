@@ -1,10 +1,9 @@
 backend:
-  name: github
-  repo: altuneagency/cms-demo-site
+  name: git-gateway
   branch: main
 
-media_folder: images # Media files will be stored in the repo under images
-public_folder: /images # The src attribute for uploaded media will begin with /images
+media_folder: "images"
+public_folder: "/images"
 
 collections:
   - name: "pages"
@@ -14,16 +13,15 @@ collections:
         name: "home"
         file: "content/home.json"
         fields:
-          - label: "Hero Section"
+          - label: "Hero"
             name: "hero"
             widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "string" }
               - { label: "Button Text", name: "buttonText", widget: "string" }
-              - { label: "Button Aria Label", name: "buttonAriaLabel", widget: "string" }
 
-          - label: "Services Section"
+          - label: "Services"
             name: "services"
             widget: "object"
             fields:
@@ -32,7 +30,6 @@ collections:
                 name: "items"
                 widget: "list"
                 fields:
-                  - { label: "Icon", name: "icon", widget: "string" }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "text" }
 
@@ -42,13 +39,6 @@ collections:
             fields:
               - { label: "Image", name: "src", widget: "image" }
               - { label: "Alt Text", name: "alt", widget: "string" }
-
-          - label: "Contact Section"
-            name: "contact"
-            widget: "object"
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
 
       - label: "About Page"
         name: "about"
