@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about our business, our mission, and our team. Discover what drives us and how we serve our customers.">
+    <meta name="keywords" content="about us, business mission, company history, team">
+    <meta name="author" content="Business Name">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About Us - Business Name">
+    <meta property="og:description" content="Learn more about our business, our mission, and our team.">
+    <meta property="og:url" content="">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us - Business Name">
+    <meta name="twitter:description" content="Learn more about our business, our mission, and our team.">
+    
+    <title>About Us - Business Name | Our Mission & Story</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <nav aria-label="Main navigation">
+            <div class="container">
+                <a href="index.html" class="logo" aria-label="Business Name - Home">Business Name</a>
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+                    <li role="none"><a href="about.html" class="active" role="menuitem" aria-current="page">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Page Title -->
+        <!-- CMS CONNECTION: Page title comes from CMS -->
+        <section class="page-header" aria-labelledby="page-heading">
+            <div class="container">
+                <!-- CMS TEXT: Page title from CMS (currently: pageTitle from JSON) -->
+                <h1 id="page-heading" data-content="pageTitle">About Us</h1>
+            </div>
+        </section>
+
+        <!-- Text Content Section -->
+        <!-- CMS CONNECTION: All paragraph content comes from CMS -->
+        <section class="content" aria-labelledby="content-heading">
+            <div class="container">
+                <h2 id="content-heading" class="sr-only">Our Story</h2>
+                <!-- CMS TEXT: Paragraphs array from CMS (currently: content.paragraphs from JSON) -->
+                <!-- Each paragraph is editable in CMS as separate text blocks -->
+                <div data-content="content.paragraphs" data-template="paragraphs">
+                    <!-- Paragraphs will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Section -->
+        <!-- CMS CONNECTION: About page image comes from CMS media library -->
+        <section class="image-section" aria-label="About us image">
+            <div class="container">
+                <!-- CMS IMAGE: Image src, alt, width, height all from CMS (currently: image object from JSON) -->
+                <!-- CMS would provide: image.src (URL), image.alt (text), image.width, image.height -->
+                <img src="images/placeholder.svg" alt="Descriptive alt text for your about page image showcasing your business, team, or workspace" class="main-image" loading="lazy" width="1000" height="600" data-content="image">
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Business Name</h3>
+                    <p>Your business tagline or brief description</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>
+                        <a href="mailto:info@example.com" aria-label="Send email to info@example.com">Email: info@example.com</a>
+                    </p>
+                    <p>
+                        <a href="tel:+11234567890" aria-label="Call us at 1-123-456-7890">Phone: (123) 456-7890</a>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Location</h4>
+                    <address>
+                        <p>123 Main Street</p>
+                        <p>City, State 12345</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <time datetime="2024">2024</time> Business Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

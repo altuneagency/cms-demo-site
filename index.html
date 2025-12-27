@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to our small business - providing quality services with dedication and excellence. Contact us today to learn more about what we offer.">
+    <meta name="keywords" content="business, services, professional, quality">
+    <meta name="author" content="Business Name">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Home - Business Name">
+    <meta property="og:description" content="Welcome to our small business - providing quality services with dedication and excellence.">
+    <meta property="og:url" content="">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Home - Business Name">
+    <meta name="twitter:description" content="Welcome to our small business - providing quality services with dedication and excellence.">
+    
+    <title>Home - Business Name | Quality Services & Professional Excellence</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+        <nav aria-label="Main navigation">
+            <div class="container">
+                <a href="index.html" class="logo" aria-label="Business Name - Home">Business Name</a>
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="index.html" class="active" role="menuitem" aria-current="page">Home</a></li>
+                    <li role="none"><a href="about.html" role="menuitem">About</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <!-- CMS CONNECTION: All hero text content comes from CMS -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="container">
+                <!-- CMS TEXT: Hero title from CMS (currently: hero.title from JSON) -->
+                <h1 id="hero-heading" data-content="hero.title">Your Main Heading Here</h1>
+                <!-- CMS TEXT: Hero subtitle from CMS (currently: hero.subtitle from JSON) -->
+                <p data-content="hero.subtitle">Your compelling subtitle that describes what you offer</p>
+                <!-- CMS TEXT: Button text from CMS (currently: hero.buttonText from JSON) -->
+                <a href="#contact" class="btn btn-primary" data-content="hero.buttonText" data-aria-label="hero.buttonAriaLabel">Get Started</a>
+            </div>
+        </section>
+
+        <!-- Services / Features Section -->
+        <!-- CMS CONNECTION: All services content comes from CMS -->
+        <section class="services" aria-labelledby="services-heading">
+            <div class="container">
+                <!-- CMS TEXT: Services section heading from CMS (currently: services.heading from JSON) -->
+                <h2 id="services-heading" data-content="services.heading">Our Services</h2>
+                <!-- CMS TEXT: Services list dynamically generated from CMS (currently: services.items array from JSON) -->
+                <!-- Each service card includes: icon, title, description - all from CMS -->
+                <div class="services-grid" role="list" data-content="services.items" data-template="service-card">
+                    <!-- Services will be injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Section -->
+        <!-- CMS CONNECTION: Main image comes from CMS media library -->
+        <section class="image-section" aria-label="Featured image">
+            <div class="container">
+                <!-- CMS IMAGE: Image src, alt, width, height all from CMS (currently: image object from JSON) -->
+                <!-- CMS would provide: image.src (URL), image.alt (text), image.width, image.height -->
+                <img src="images/placeholder.svg" alt="Descriptive alt text for your main image showcasing your business or services" class="main-image" loading="lazy" width="1000" height="600" data-content="image">
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <!-- CMS CONNECTION: Contact section text comes from CMS -->
+        <section id="contact" class="contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <!-- CMS TEXT: Contact heading from CMS (currently: contact.heading from JSON) -->
+                <h2 id="contact-heading" data-content="contact.heading">Get In Touch</h2>
+                <!-- CMS TEXT: Contact description from CMS (currently: contact.description from JSON) -->
+                <p data-content="contact.description">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                <form class="contact-form" name="contact" method="POST" netlify netlify-honeypot="bot-field" aria-label="Contact form">
+                    <input type="hidden" name="form-name" value="contact">
+                    <p class="sr-only">
+                        <label>
+                            Don't fill this out if you're human: <input name="bot-field" />
+                        </label>
+                    </p>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required aria-required="true" aria-describedby="name-desc">
+                        <span id="name-desc" class="sr-only">Enter your full name</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required aria-required="true" aria-describedby="email-desc">
+                        <span id="email-desc" class="sr-only">Enter your email address</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required aria-required="true" aria-describedby="message-desc"></textarea>
+                        <span id="message-desc" class="sr-only">Enter your message</span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div class="form-success" id="form-success" role="alert" aria-live="polite" style="display: none;">
+                        <p>Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <!-- CMS CONNECTION: Footer content could come from CMS (optional) -->
+                <div class="footer-section">
+                    <!-- CMS TEXT: Business name from CMS -->
+                    <h3>Business Name</h3>
+                    <!-- CMS TEXT: Business tagline from CMS -->
+                    <p>Your business tagline or brief description</p>
+                </div>
+                <div class="footer-section">
+                    <!-- CMS TEXT: Contact info from CMS -->
+                    <h4>Contact</h4>
+                    <p>
+                        <!-- CMS TEXT: Email address from CMS -->
+                        <a href="mailto:info@example.com" aria-label="Send email to info@example.com">Email: info@example.com</a>
+                    </p>
+                    <p>
+                        <!-- CMS TEXT: Phone number from CMS -->
+                        <a href="tel:+11234567890" aria-label="Call us at 1-123-456-7890">Phone: (123) 456-7890</a>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <!-- CMS TEXT: Location/address from CMS -->
+                    <h4>Location</h4>
+                    <address>
+                        <p>123 Main Street</p>
+                        <p>City, State 12345</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <time datetime="2024">2024</time> Business Name. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

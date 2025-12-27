@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "title": "Your Main Heading Here",
+    "subtitle": "Your compelling subtitle that describes what you offer",
+    "buttonText": "Get Started",
+    "buttonAriaLabel": "Get started - navigate to contact form"
+  },
+  "services": {
+    "heading": "Our Services",
+    "items": [
+      {
+        "icon": "📋",
+        "title": "Service One",
+        "description": "Description of your first service or feature. Explain what makes it valuable."
+      },
+      {
+        "icon": "⚡",
+        "title": "Service Two",
+        "description": "Description of your second service or feature. Highlight the benefits."
+      },
+      {
+        "icon": "🎯",
+        "title": "Service Three",
+        "description": "Description of your third service or feature. Showcase what sets you apart."
+      }
+    ]
+  },
+  "image": {
+    "src": "images/serverroom.jpg",
+    "alt": "Descriptive alt text for your main image showcasing your business or services",
+    "width": 1000,
+    "height": 600
+  },
+  "contact": {
+    "heading": "Get In Touch",
+    "description": "We'd love to hear from you. Send us a message and we'll respond as soon as possible."
+  }
+}
+
