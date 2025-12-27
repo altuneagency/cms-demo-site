@@ -7,104 +7,64 @@ media_folder: images # Media files will be stored in the repo under images
 public_folder: /images # The src attribute for uploaded media will begin with /images
 
 collections:
-  - name: "home"
-    label: "Home Page"
-    file: "content/home.json"
-    format: "json"
-    fields:
-      - label: "Hero Section"
-        name: "hero"
-        widget: "object"
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "content/home.json"
         fields:
-          - label: "Title"
-            name: "title"
-            widget: "string"
-
-          - label: "Subtitle"
-            name: "subtitle"
-            widget: "string"
-
-          - label: "Button Text"
-            name: "buttonText"
-            widget: "string"
-
-          - label: "Button Aria Label"
-            name: "buttonAriaLabel"
-            widget: "string"
-
-      - label: "Services Section"
-        name: "services"
-        widget: "object"
-        fields:
-          - label: "Heading"
-            name: "heading"
-            widget: "string"
-
-          - label: "Items"
-            name: "items"
-            widget: "list"
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
             fields:
-              - label: "Icon"
-                name: "icon"
-                widget: "string"
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Aria Label", name: "buttonAriaLabel", widget: "string" }
 
-              - label: "Title"
-                name: "title"
-                widget: "string"
+          - label: "Services Section"
+            name: "services"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
 
-              - label: "Description"
-                name: "description"
-                widget: "text"
+          - label: "Main Image"
+            name: "image"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
 
-      - label: "Main Image"
-        name: "image"
-        widget: "object"
+          - label: "Contact Section"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+      - label: "About Page"
+        name: "about"
+        file: "content/about.json"
         fields:
-          - label: "Image"
-            name: "src"
-            widget: "image"
+          - { label: "Page Title", name: "pageTitle", widget: "string" }
 
-          - label: "Alt Text"
-            name: "alt"
-            widget: "string"
+          - label: "Paragraphs"
+            name: "paragraphs"
+            widget: "list"
+            field:
+              { label: "Paragraph", name: "paragraph", widget: "text" }
 
-      - label: "Contact Section"
-        name: "contact"
-        widget: "object"
-        fields:
-          - label: "Heading"
-            name: "heading"
-            widget: "string"
-
-          - label: "Description"
-            name: "description"
-            widget: "text"
-
-  - name: "about"
-    label: "About Page"
-    file: "content/about.json"
-    format: "json"
-    fields:
-      - label: "Page Title"
-        name: "pageTitle"
-        widget: "string"
-
-      - label: "Paragraphs"
-        name: "paragraphs"
-        widget: "list"
-        field:
-          label: "Paragraph"
-          name: "paragraph"
-          widget: "text"
-
-      - label: "Main Image"
-        name: "image"
-        widget: "object"
-        fields:
-          - label: "Image"
-            name: "src"
-            widget: "image"
-
-          - label: "Alt Text"
-            name: "alt"
-            widget: "string"
+          - label: "Main Image"
+            name: "image"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
