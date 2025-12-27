@@ -6,66 +6,63 @@ media_folder: images # Media files will be stored in the repo under images
 public_folder: /images # The src attribute for uploaded media will begin with /images
 
 collections:
-  - name: "home"
-    label: "Home Page"
-    file: "content/home.json"
-    format: "json"
-    fields:
-      - label: "Hero Section"
-        name: "hero"
-        widget: "object"
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Home Page"
+        file: "content/home.json"
+        format: "json"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - { label: "Button Text", name: "buttonText", widget: "string" }
-          - { label: "Button Aria Label", name: "buttonAriaLabel", widget: "string" }
-      - label: "Services Section"
-        name: "services"
-        widget: "object"
-        fields:
-          - { label: "Heading", name: "heading", widget: "string" }
-          - label: "Service Items"
-            name: "items"
-            widget: "list"
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
             fields:
-              - { label: "Icon (emoji)", name: "icon", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-      - label: "Main Image"
-        name: "image"
-        widget: "object"
-        fields:
-          - { label: "Image Path", name: "src", widget: "string", hint: "e.g., images/photo.jpg" }
-          - { label: "Alt Text", name: "alt", widget: "string" }
-          - { label: "Width", name: "width", widget: "number", default: 1000 }
-          - { label: "Height", name: "height", widget: "number", default: 600 }
-      - label: "Contact Section"
-        name: "contact"
-        widget: "object"
-        fields:
-          - { label: "Heading", name: "heading", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Aria Label", name: "buttonAriaLabel", widget: "string" }
 
-  - name: "about"
-    label: "About Page"
-    file: "content/about.json"
-    format: "json"
-    fields:
-      - { label: "Page Title", name: "pageTitle", widget: "string" }
-      - label: "Content"
-        name: "content"
-        widget: "object"
-        fields:
-          - label: "Paragraphs"
-            name: "paragraphs"
-            widget: "list"
-            field: { label: "Paragraph", name: "paragraph", widget: "text" }
-      - label: "Main Image"
-        name: "image"
-        widget: "object"
-        fields:
-          - { label: "Image Path", name: "src", widget: "string", hint: "e.g., images/photo.jpg" }
-          - { label: "Alt Text", name: "alt", widget: "string" }
-          - { label: "Width", name: "width", widget: "number", default: 1000 }
-          - { label: "Height", name: "height", widget: "number", default: 600 }
+          - label: "Services Section"
+            name: "services"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
 
+          - label: "Main Image"
+            name: "image"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
+
+      - name: "about"
+        label: "About Page"
+        file: "content/about.json"
+        format: "json"
+        fields:
+          - { label: "Page Title", name: "pageTitle", widget: "string" }
+
+          - label: "Content"
+            name: "content"
+            widget: "object"
+            fields:
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field:
+                  { label: "Paragraph", name: "text", widget: "text" }
+
+          - label: "Main Image"
+            name: "image"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
