@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: altuneagency/cms-demo-site
+  name: git-gateway
   branch: main
 
 media_folder: "images"
@@ -10,52 +9,16 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - label: "Home Page"
+      - label: "Home"
         name: "home"
         file: "content/home.json"
         fields:
-          - label: "Hero"
-            name: "hero"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "string" }
-              - { label: "Button Text", name: "buttonText", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
 
-          - label: "Services"
-            name: "services"
-            widget: "object"
-            fields:
-              - { label: "Heading", name: "heading", widget: "string" }
-              - label: "Items"
-                name: "items"
-                widget: "list"
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Description", name: "description", widget: "text" }
-
-          - label: "Main Image"
-            name: "image"
-            widget: "object"
-            fields:
-              - { label: "Image", name: "src", widget: "image" }
-              - { label: "Alt Text", name: "alt", widget: "string" }
-
-      - label: "About Page"
+      - label: "About"
         name: "about"
         file: "content/about.json"
         fields:
-          - { label: "Page Title", name: "pageTitle", widget: "string" }
-
-          - label: "Paragraphs"
-            name: "paragraphs"
-            widget: "list"
-            field:
-              { label: "Paragraph", name: "paragraph", widget: "text" }
-
-          - label: "Main Image"
-            name: "image"
-            widget: "object"
-            fields:
-              - { label: "Image", name: "src", widget: "image" }
-              - { label: "Alt Text", name: "alt", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "text" }
